@@ -2,7 +2,7 @@
 import React, { useState, useRef } from 'react'
 import ProjectCard from './ProjectCard'
 import ProjectTag from './ProjectTag'
-
+import Link from 'next/link'
 
 const projectsData = [
   {
@@ -11,8 +11,8 @@ const projectsData = [
     description: "project 1 desc",
     image: "/projects/1.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/"
+    gitUrl: "https://github.com/donirj/the-game",
+    previewUrl: "https://keen-murdock-04411d.netlify.app/",
   },
   {
     id: 2,
@@ -20,8 +20,8 @@ const projectsData = [
     description: "project 1 desc",
     image:  "/projects/2.png",
     tag: ["All", "Mobile"],
-    gitUrl: "/",
-    previewUrl: "/"
+    gitUrl: "https://github.com/donirj/pokedex-js",
+    previewUrl: "https://vocal-moonbeam-7d06b6.netlify.app/"
   },
   {
     id: 3,
@@ -29,8 +29,8 @@ const projectsData = [
     description: "project 1 desc",
     image: "/projects/3.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/"
+    gitUrl: "https://github.com/donirj/reactjs-ecommerce-project",
+    previewUrl: "https://tiny-begonia-25a38c.netlify.app/"
   },
   {
     id: 4,
@@ -38,8 +38,8 @@ const projectsData = [
     description: "project 1 desc",
     image:  "/projects/4.png",
     tag: ["All", "Mobile"],
-    gitUrl: "/",
-    previewUrl: "/"
+    gitUrl: "https://github.com/donirj/newPortfolio",
+    previewUrl: "https://legendary-fairy-641ef0.netlify.app/"
   },
 ]
 

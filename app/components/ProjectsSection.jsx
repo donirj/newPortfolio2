@@ -1,7 +1,7 @@
 "use client"
 import React, { useState, useRef } from 'react'
 import ProjectCard from './ProjectCard'
-import ProjectTag from './ProjectCard'
+import ProjectTag from './ProjectTag'
 
 
 const projectsData = [
@@ -10,7 +10,7 @@ const projectsData = [
     title: "react portfolio website",
     description: "project 1 desc",
     image: "/projects/1.png",
-    tag: ["all", "web"],
+    tag: ["All", "Web"],
     gitUrl: "/",
     previewUrl: "/"
   },
@@ -19,7 +19,7 @@ const projectsData = [
     title: "react portfolio website",
     description: "project 1 desc",
     image:  "/projects/2.png",
-    tag: ["all", "web"],
+    tag: ["All", "Mobile"],
     gitUrl: "/",
     previewUrl: "/"
   },
@@ -28,7 +28,7 @@ const projectsData = [
     title: "react portfolio website",
     description: "project 1 desc",
     image: "/projects/3.png",
-    tag: ["all", "web"],
+    tag: ["All", "Web"],
     gitUrl: "/",
     previewUrl: "/"
   },
@@ -37,7 +37,7 @@ const projectsData = [
     title: "react portfolio website",
     description: "project 1 desc",
     image:  "/projects/4.png",
-    tag: ["all", "web"],
+    tag: ["All", "Mobile"],
     gitUrl: "/",
     previewUrl: "/"
   },
@@ -53,9 +53,9 @@ const ProjectsSection = () => {
     setTag(newTag)
   }
 
-  const filteredProjects = projectsData.filter((project) => {
+  const filteredProjects = projectsData.filter((project) => 
     project.tag.includes(tag)
-  });
+  )
   
   return (
     <section id="projects">
@@ -79,8 +79,8 @@ const ProjectsSection = () => {
           isSelected={tag === "Mobile"}
         />
       </div>
-      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
-        {projectsData.map((project, index) => (
+      <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+        {filteredProjects.map((project) => (
             <ProjectCard
               key={project.id}
               title={project.title}
@@ -90,7 +90,7 @@ const ProjectsSection = () => {
               previewUrl={project.previewUrl}
             />
         ))}
-      </ul>
+      </div>
     </section>
   );
 };

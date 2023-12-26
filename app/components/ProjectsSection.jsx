@@ -9,7 +9,7 @@ const projectsData = [
     id: 1,
     title: "react portfolio website",
     description: "project 1 desc",
-    image: "./../../images/blogfirebase.png",
+    image: "/projects/1.png",
     tag: ["all", "web"],
     gitUrl: "/",
     previewUrl: "/"
@@ -18,7 +18,7 @@ const projectsData = [
     id: 2,
     title: "react portfolio website",
     description: "project 1 desc",
-    image: "./../../images/memory.png",
+    image:  "/projects/2.png",
     tag: ["all", "web"],
     gitUrl: "/",
     previewUrl: "/"
@@ -27,7 +27,7 @@ const projectsData = [
     id: 3,
     title: "react portfolio website",
     description: "project 1 desc",
-    image: "/images/projects/1.png",
+    image: "/projects/3.png",
     tag: ["all", "web"],
     gitUrl: "/",
     previewUrl: "/"
@@ -36,7 +36,7 @@ const projectsData = [
     id: 4,
     title: "react portfolio website",
     description: "project 1 desc",
-    image: "/images/coding.jpg",
+    image:  "/projects/4.png",
     tag: ["all", "web"],
     gitUrl: "/",
     previewUrl: "/"

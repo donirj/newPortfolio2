@@ -1,5 +1,5 @@
 "use client"
-import React, {useState} from 'react'
+import React, {useState, useEffect } from 'react'
 import Link from 'next/link'
 import NavLink from './NavLink'
 import { Bars3Icon } from '@heroicons/react/24/outline'
@@ -9,7 +9,8 @@ import MenuOverlay from './MenuOverlay'
 const navLinks = [
   {
     title: "about",
-    path: "#about"
+    path: "/about"
+    
   },
   {
     title: "projects",
@@ -22,6 +23,11 @@ const navLinks = [
 ]
 
 const Navbar = () => {
+
+   // Similar to componentDidMount and componentDidUpdate:
+   useEffect(() => {
+    console.log(navLinks)
+  });
 
   const [navbarOpen, setNavbarOpen] = useState(false)
 
@@ -50,7 +56,7 @@ const Navbar = () => {
               <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
                 {navLinks.map((link, index) => (
                   <li key={index}>
-                    <NavLink href={link.path} title={link.title} />
+                    <NavLink to={link.path} title={link.title} />
                   </li>
                 ))}
               </ul>
